@@ -20,5 +20,5 @@
     "demo": [
         "data/demo_website_sale_product_description.xml",
     ],
-    "images":["static/description/img1.jpg"],
+    "images":["static/description/assets/img1.jpg"],
 }
