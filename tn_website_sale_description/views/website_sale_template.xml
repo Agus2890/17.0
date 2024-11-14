@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="product" inherit_id="website_sale.product">
+        <xpath expr="//div[@id='product_details']/.." position="after">
+            <div class="o_not_editable">
+                <p
+                    t-field="product.public_description"
+                    id="product_public_description"
+                />
+            </div>
+        </xpath>
+    </template>
+
+    <template id="total_inh" inherit_id="website_sale.total">
+        <xpath expr="//tr[@id='order_total_untaxed']" position="replace">
+            <tr id="order_total_untaxed" style="display: none;">
+              <td class="text-right border-0">Subtotal:</td>
+              <td class="text-xl-right border-0" >
+                  <span t-field="website_sale_order.amount_untaxed" class="monetary_field" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+              </td>
+            </tr>
+        </xpath>
+        <xpath expr="//tr[@id='order_total_taxes']" position="replace">
+            <tr id="order_total_taxes" style="display: none;">
+                  <td class="text-right border-0">Taxes:</td>
+                  <td class="text-xl-right border-0">
+                       <span t-field="website_sale_order.amount_tax" class="monetary_field" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                  </td>
+            </tr>
+        </xpath>
+    </template>
+
+</odoo>
