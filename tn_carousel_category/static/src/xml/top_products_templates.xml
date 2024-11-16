@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Template for displaying top-selling products in categories -->
+<templates id="template" xml:space="preserve">
+    <t t-name="tn_carousel_category.products_category_wise">
+       <div id="top_selling_products_carousel" class="container">
+ 
+
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <!-- Inicializamos un índice para controlar el slide activo -->
+                    <t t-set="index" t-value="0"/>
+                    
+                    <!-- Recorremos cada grupo en products_list -->
+                    <t t-foreach="chunksv2" t-as="category_group" t-key="index">
+                        <div t-att-class="index == 0 ? 'carousel-item active' : 'carousel-item'">
+                            <div class="row">
+                                <!-- Recorremos cada categoría dentro del grupo -->
+                                <t t-foreach="category_group" t-as="category" t-key="category.id">
+                                    <div class="col-lg-2 col-md-4 col-6 o_colored_level">
+                                        <div class="o_carousel_product_card bg-transparent w-100 card border-1 m-0">
+                                            <a class="o_carousel_product_img_link o_dynamic_product_hovered stretched-link m-0"
+                                               t-att-href="'/shop/category/' + category.name.slug + '-' + category.id">
+                                                <div class="overflow-hidden rounded m-0" style="width:100% !important">
+                                                    <img class="card-img-top o_img_product_square o_img_product_cover h-auto m-0"
+                                                         style="width:100% !important" t-attf-src="data:image/jpeg;base64,{{category.image_1920}}"/>
+                                                    <div class="o_carousel_product_card_body d-flex flex-wrap flex-column justify-content-between h-100 p-3 ">
+                                                        <div class=" bg-black-50 text-center pt28 pb20 o_draggable o_colored_level" t-esc="category.name"/>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                        <t t-set="index" t-value="index + 1"/>
+                    </t>
+                </div>
+                
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="fa fa-chevron-circle-left fa-2x"
+                                              style="color:blue;"/>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="fa fa-chevron-circle-right fa-2x" style="color:blue;"/>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+
+
+
+           
+        </div>
+    </t>
+</templates>
