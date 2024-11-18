@@ -6,7 +6,7 @@
     "summary": "Shows custom e-Commerce description for products",
     "version": "17.0.1.0.0",
     "website": "",
-    "author": "Tecno",
+    "author": "Tecno Pos",
     'price': 6,
     'currency': "USD",
     "license": "AGPL-3",
