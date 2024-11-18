@@ -31,7 +31,7 @@
     'company': 'Tecno Pos',
     'maintainer': 'Tecno Pos',
     'website': '',
-    'price': 20,
+    'price': 18,
     'currency': "USD",
     'depends': ['website_sale'],
     'data': [
@@ -47,7 +47,7 @@
             'tn_carousel_category/static/src/css/products_'
             'carousel.css',
         ]},
-    'images': ['static/description/banner.jpg'],
+    'images': ['static/description/assets/img4.jpg'],
     'license': 'LGPL-3',
     'installable': True,
     'auto-install': False,

@@ -6,7 +6,7 @@
     'website': "",
     'category': 'Point of Sale',
     'module_type': 'official',
-    'price': 25,
+    'price': 20,
     'currency': "USD",
     'version': '1.0',
     'depends': ['point_of_sale'],
