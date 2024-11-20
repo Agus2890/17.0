@@ -35,7 +35,7 @@
         'security/cancel_mrp_order_groups.xml',
         'views/mrp_production_views.xml',
     ],
-    'images': ['static/description/banner.png'],
+    'images': ['static/description/assets/image1.jpg'],
     'license': 'AGPL-3',
     'installable': True,
     'auto_install': False,
