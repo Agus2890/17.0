@@ -19,7 +19,7 @@
 #############################################################################
 {
     'name': 'mrp order cancel reset',
-    'version': '17.0.1.0.0',
+     'version': "18.0.1.0.0",
     'category': 'Manufacturing',
     'summary': 'reset draft Allows users reset to draft manufacturing order by clicking '
                'the button "CANCEL" reset workorder',
