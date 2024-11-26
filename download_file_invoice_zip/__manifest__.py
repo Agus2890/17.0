@@ -20,6 +20,7 @@
     ],
     "images":["static/description/banner.gif"],
     'qweb': [],
+    'license': 'AGPL-3',
     'installable': True,
     'application': True,
 }
